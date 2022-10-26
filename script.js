@@ -1,0 +1,4 @@
+function clicar(){
+    alert('oi')
+}
+
