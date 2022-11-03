@@ -62,7 +62,7 @@ function rend_msgs(mensagens){
         let msgs = lista_mensagens[i]
         if(msgs.type === 'status'){
             area_section.innerHTML += `
-            <li class="msg status" >
+            <li class="msg status" data-test="message">
                 <div class="time">(${msgs.time})</div>
                 <div class="from"><span>${msgs.from}</span></div>
                 <div class="text">${msgs.text}</div>
@@ -71,7 +71,7 @@ function rend_msgs(mensagens){
         }
         else if(msgs.type === 'message'){
             area_section.innerHTML += `
-            <li class="msg message">
+            <li class="msg message" data-test="message">
                 <div class="time">(${msgs.time})</div>
                 <div class="from"><span>${msgs.from}</span> para <span>${msgs.to}</span>:</div>
                 <div class="text">${msgs.text}</div>
@@ -80,7 +80,7 @@ function rend_msgs(mensagens){
         }
         else if(msgs.type === 'private_message'){
             area_section.innerHTML += `
-            <li class="msg private ">
+            <li class="msg private" data-test="message">
                 <div class="time">(${msgs.time})</div>
                 <div class="from"><span>${msgs.from}</span> reservadamente para <span>${msgs.to}</span>:</div>
                 <div class="text">${msgs.text}</div>
