@@ -3,8 +3,6 @@ let lista_mensagens = [];
 let name_obj ={name:''}
 
 
-
-
 function post_status(){
 
     nome = prompt('Seu lindo nome?')
@@ -64,7 +62,7 @@ function rend_msgs(mensagens){
         let msgs = lista_mensagens[i]
         if(msgs.type === 'status'){
             area_section.innerHTML += `
-            <li class="msg status">
+            <li class="msg status" >
                 <div class="time">(${msgs.time})</div>
                 <div class="from"><span>${msgs.from}</span></div>
                 <div class="text">${msgs.text}</div>
@@ -104,7 +102,12 @@ function roll_end(){
     elemento_roll_to.scrollIntoView();
 }
 
+
+
+
 function clicar(){
+
+   
 
     let element_input = document.querySelector('input')
 
@@ -122,6 +125,14 @@ function clicar(){
     roll_end()
 }
 
+
 get_message()
 
 setInterval(get_message,3000)
+
+
+
+
+    
+
+
